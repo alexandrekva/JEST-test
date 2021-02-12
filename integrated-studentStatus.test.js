@@ -1,11 +1,31 @@
 const studentStatus = require("./studentStatus");
 
+/**
+ * Teste integrado da função studentStatus - sua verificação depende do correto
+ *  funcionamento das funções importadas por ele (averageStatus e gradesAverage)
+ *
+ * Comportamento esperado - > Retornar uma média simples dos valores inseridos e a situação atual de acordo com a média
+ *
+ * IMPORTANTE - Um teste bem feito deve verificar todos os limites especificados nos requisitos!
+ *
+ *  - repproved caso a média seja maior ou igual que 0 menor que 5
+ *  - final exam caso a média seja maior ou igual a 5 e menor que 6
+ *  - approved caso a média seja maior ou igual a 6 e menor que 10
+ *  - perfect grade caso a média seja menor igual a 10
+ *
+ */
+
+// Descrição do cenário a ser testado.
 test("grades 20 and 10 to average 15 and be out of range", () => {
-  expect(studentStatus([20, 10])).toBe("Grade: 15 / Status: grade out of range");
+  expect(studentStatus([20, 10])).toBe(
+    "Grade: 15 / Status: grade out of range"
+  );
 });
 
 test("grades -10 and -10 to average -10 and be out of range", () => {
-  expect(studentStatus([-10, -10])).toBe("Grade: -10 / Status: grade out of range");
+  expect(studentStatus([-10, -10])).toBe(
+    "Grade: -10 / Status: grade out of range"
+  );
 });
 
 test("grades 10 and 10 to average 10 and be a perfect grade", () => {

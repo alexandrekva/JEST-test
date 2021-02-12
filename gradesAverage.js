@@ -11,7 +11,7 @@ function getAverage(grades) {
     count++;
     total += grade;
   });
-  return (total/count);
+  return total / count;
 }
 
 module.exports = getAverage;

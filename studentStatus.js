@@ -1,5 +1,5 @@
-const averageStatus = require('./averageStatus');
-const gradesAverage = require('./gradesAverage');
+const averageStatus = require("./averageStatus");
+const gradesAverage = require("./gradesAverage");
 
 /**
  * Função que deve retornar a situação atual do aluno
@@ -7,10 +7,10 @@ const gradesAverage = require('./gradesAverage');
  */
 
 function studentStatus(grades) {
-    let average = gradesAverage(grades);
-    let status = averageStatus(average);
+  let average = gradesAverage(grades);
+  let status = averageStatus(average);
 
-    return `Grade: ${average} / Status: ${status}`;
+  return `Grade: ${average} / Status: ${status}`;
 }
 
 module.exports = studentStatus;
